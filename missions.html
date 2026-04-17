@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Missions – Beyond Earth</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ====== NAVIGATION BAR ====== -->
+  <nav class="main-navbar">
+    <div class="navbar-inner">
+      <a href="index.html" class="site-logo">BEYOND<span>EARTH</span></a>
+      <ul class="nav-links-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="planets.html">Planets</a></li>
+        <li><a href="missions.html" class="active-page">Missions</a></li>
+        <li><a href="astronauts.html">Astronauts</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="links.html">Cool Links</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="sitemap.html">Site Map</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ====== PAGE TITLE ====== -->
+  <div class="page-title-banner">
+    <h1>SPACE MISSIONS</h1>
+    <p>From the first satellite to the edge of the solar system</p>
+  </div>
+
+  <!-- ====== MISSIONS TABLE ====== -->
+  <section class="missions-main-section">
+
+    <p class="missions-intro-text">
+      Humanity has launched thousands of missions into space. Below is a look at some of the
+      most important and iconic ones — from early firsts to ambitious future plans.
+    </p>
+
+    <!-- TABLE 1: Historical Missions with colspan and rowspan -->
+    <table class="big-missions-table">
+      <caption>Notable Space Missions — Historical Overview</caption>
+      <thead>
+        <tr>
+          <th>Era</th>
+          <th>Mission</th>
+          <th>Agency</th>
+          <th>Year</th>
+          <th>Destination</th>
+          <th>Achievement</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+
+        <!-- Space Race Era — rowspan for era column -->
+        <tr>
+          <td rowspan="4">Space Race Era</td>
+          <td>Sputnik 1</td>
+          <td>Soviet Union</td>
+          <td>1957</td>
+          <td>Earth Orbit</td>
+          <td>First artificial satellite ever launched</td>
+          <td><span class="mission-status-badge status-complete">Complete</span></td>
+        </tr>
+        <tr>
+          <td>Vostok 1</td>
+          <td>Soviet Union</td>
+          <td>1961</td>
+          <td>Earth Orbit</td>
+          <td>First human in space (Yuri Gagarin)</td>
+          <td><span class="mission-status-badge status-complete">Complete</span></td>
+        </tr>
+        <tr>
+          <td>Apollo 11</td>
+          <td>NASA</td>
+          <td>1969</td>
+          <td>The Moon</td>
+          <td>First humans to land on the Moon</td>
+          <td><span class="mission-status-badge status-complete">Complete</span></td>
+        </tr>
+        <tr>
+          <td>Voyager 1</td>
+          <td>NASA</td>
+          <td>1977</td>
+          <td>Deep Space</td>
+          <td>First spacecraft to reach interstellar space</td>
+          <td><span class="mission-status-badge status-active">Active</span></td>
+        </tr>
+
+        <!-- Modern Era — rowspan for era column -->
+        <tr>
+          <td rowspan="4">Modern Era</td>
+          <td>Hubble Space Telescope</td>
+          <td>NASA / ESA</td>
+          <td>1990</td>
+          <td>Earth Orbit</td>
+          <td>Revolutionized our view of deep space</td>
+          <td><span class="mission-status-badge status-active">Active</span></td>
+        </tr>
+        <tr>
+          <td>Mars Pathfinder</td>
+          <td>NASA</td>
+          <td>1997</td>
+          <td>Mars</td>
+          <td>First successful Mars rover (Sojourner)</td>
+          <td><span class="mission-status-badge status-complete">Complete</span></td>
+        </tr>
+        <tr>
+          <td>ISS Assembly</td>
+          <td>NASA / Roscosmos / ESA / JAXA / CSA</td>
+          <td>2000</td>
+          <td>Earth Orbit</td>
+          <td>Permanent human presence in space begins</td>
+          <td><span class="mission-status-badge status-active">Active</span></td>
+        </tr>
+        <tr>
+          <td>Curiosity Rover</td>
+          <td>NASA</td>
+          <td>2012</td>
+          <td>Mars</td>
+          <td>Confirmed Mars once had conditions for life</td>
+          <td><span class="mission-status-badge status-active">Active</span></td>
+        </tr>
+
+        <!-- Future Missions -->
+        <tr>
+          <td rowspan="3">Future Missions</td>
+          <td>Artemis Program</td>
+          <td>NASA</td>
+          <td>2026+</td>
+          <td>The Moon</td>
+          <td>Return humans to the Moon, first woman on Moon</td>
+          <td><span class="mission-status-badge status-planned">Planned</span></td>
+        </tr>
+        <tr>
+          <td>Mars Sample Return</td>
+          <td>NASA / ESA</td>
+          <td>2028</td>
+          <td>Mars</td>
+          <td>Bring Martian rocks back to Earth for study</td>
+          <td><span class="mission-status-badge status-planned">Planned</span></td>
+        </tr>
+        <tr>
+          <td>Starship Mars Mission</td>
+          <td>SpaceX</td>
+          <td>2030s</td>
+          <td>Mars</td>
+          <td>First crewed landing on Mars</td>
+          <td><span class="mission-status-badge status-planned">Planned</span></td>
+        </tr>
+
+      </tbody>
+    </table>
+
+    <!-- TABLE 2: Rovers Summary with nested data -->
+    <table class="big-missions-table">
+      <caption>Mars Rover Summary</caption>
+      <thead>
+        <tr>
+          <th>Rover Name</th>
+          <th>Launch Year</th>
+          <th>Landing Site</th>
+          <th>Mass (kg)</th>
+          <th>Key Discovery</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Sojourner</td>
+          <td>1996</td>
+          <td>Ares Vallis</td>
+          <td>10.5</td>
+          <td>First in-situ chemical analysis of Martian rocks</td>
+          <td><span class="mission-status-badge status-complete">Complete</span></td>
+        </tr>
+        <tr>
+          <td>Spirit</td>
+          <td>2003</td>
+          <td>Gusev Crater</td>
+          <td>185</td>
+          <td>Evidence of ancient water activity</td>
+          <td><span class="mission-status-badge status-complete">Complete</span></td>
+        </tr>
+        <tr>
+          <td>Opportunity</td>
+          <td>2003</td>
+          <td>Meridiani Planum</td>
+          <td>185</td>
+          <td>Confirmed Mars once had liquid water</td>
+          <td><span class="mission-status-badge status-complete">Complete</span></td>
+        </tr>
+        <tr>
+          <td>Curiosity</td>
+          <td>2011</td>
+          <td>Gale Crater</td>
+          <td>899</td>
+          <td>Mars had habitable conditions in the past</td>
+          <td><span class="mission-status-badge status-active">Active</span></td>
+        </tr>
+        <tr>
+          <td>Perseverance</td>
+          <td>2020</td>
+          <td>Jezero Crater</td>
+          <td>1025</td>
+          <td>Collecting rock samples for future return</td>
+          <td><span class="mission-status-badge status-active">Active</span></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- TABLE 3: Nested Table — Space Agencies & their key missions -->
+    <table class="big-missions-table">
+      <caption>Space Agencies &amp; Their Key Missions (Nested Table Example)</caption>
+      <thead>
+        <tr>
+          <th>Agency</th>
+          <th>Country</th>
+          <th>Key Missions Detail</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>NASA</td>
+          <td>United States</td>
+          <td>
+            <!-- NESTED TABLE inside this cell -->
+            <table class="nested-missions-table">
+              <tr>
+                <th>Mission</th>
+                <th>Year</th>
+                <th>Goal</th>
+              </tr>
+              <tr>
+                <td>Apollo 11</td>
+                <td>1969</td>
+                <td>First Moon landing</td>
+              </tr>
+              <tr>
+                <td>Hubble</td>
+                <td>1990</td>
+                <td>Deep space imaging</td>
+              </tr>
+              <tr>
+                <td>Perseverance</td>
+                <td>2020</td>
+                <td>Mars sample collection</td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <tr>
+          <td>ESA</td>
+          <td>Europe</td>
+          <td>
+            <table class="nested-missions-table">
+              <tr>
+                <th>Mission</th>
+                <th>Year</th>
+                <th>Goal</th>
+              </tr>
+              <tr>
+                <td>Rosetta</td>
+                <td>2004</td>
+                <td>Comet landing</td>
+              </tr>
+              <tr>
+                <td>Gaia</td>
+                <td>2013</td>
+                <td>Star mapping</td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <tr>
+          <td>ISRO</td>
+          <td>India</td>
+          <td>
+            <table class="nested-missions-table">
+              <tr>
+                <th>Mission</th>
+                <th>Year</th>
+                <th>Goal</th>
+              </tr>
+              <tr>
+                <td>Chandrayaan-1</td>
+                <td>2008</td>
+                <td>Moon water discovery</td>
+              </tr>
+              <tr>
+                <td>Mangalyaan</td>
+                <td>2013</td>
+                <td>First Mars orbit attempt by Asia</td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+  </section>
+
+  <!-- ====== FOOTER ====== -->
+  <footer class="main-footer">
+    <div class="footer-top-row">
+      <div class="footer-address-block">
+        <p class="footer-site-name">BEYOND EARTH</p>
+        <p>
+          The British College<br />
+          Thapathali<br />
+          Kathmandu, Nepal<br />
+          Email: <a href="mailto:abc123@tbc.com">abc123@tbc.com</a>
+        </p>
+      </div>
+      <div class="footer-nav-column">
+        <h4>Explore</h4>
+        <ul class="footer-nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="planets.html">Planets</a></li>
+          <li><a href="missions.html">Missions</a></li>
+          <li><a href="astronauts.html">Astronauts</a></li>
+        </ul>
+      </div>
+      <div class="footer-nav-column">
+        <h4>More</h4>
+        <ul class="footer-nav-links">
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="links.html">Cool Links</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom-bar">
+      <p>&copy; 2025 Beyond Earth. All rights reserved.</p>
+      <ul class="footer-secondary-nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="links.html">Links</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="sitemap.html">Site Map</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
