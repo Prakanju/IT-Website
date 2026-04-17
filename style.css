@@ -1,0 +1,1080 @@
+/* ===========================
+   SPACE EXPLORATION WEBSITE
+   Main Stylesheet
+=========================== */
+
+/* --- Google Fonts --- */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Exo+2:wght@300;400;600&display=swap');
+
+/* --- Root Colors & Variables --- */
+:root {
+  --dark-space: #0a0a1a;
+  --deep-blue: #0d1b2a;
+  --star-white: #e8f4f8;
+  --bright-blue: #00b4d8;
+  --glow-blue: #0077b6;
+  --accent-gold: #ffd60a;
+  --soft-gray: #adb5bd;
+  --card-bg: #111827;
+  --nav-bg: #060614;
+  --footer-bg: #05050f;
+  --max-width: 1320px;
+}
+
+/* --- Reset & Base --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--dark-space);
+  background-image:
+    radial-gradient(ellipse at 20% 50%, rgba(0, 70, 120, 0.15) 0%, transparent 60%),
+    radial-gradient(ellipse at 80% 20%, rgba(0, 40, 80, 0.2) 0%, transparent 50%),
+    url("https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Large_Binocular_Telescope_-_swifts_2006_a.jpg/1280px-Large_Binocular_Telescope_-_swifts_2006_a.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  color: var(--star-white);
+  font-family: 'Exo 2', sans-serif;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+/* --- Page Wrapper (max width) --- */
+.page-wrapper {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ===========================
+   NAVIGATION BAR
+=========================== */
+
+.main-navbar {
+  background-color: var(--nav-bg);
+  border-bottom: 2px solid var(--bright-blue);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 65px;
+}
+
+.site-logo {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.3rem;
+  color: var(--bright-blue);
+  text-decoration: none;
+  letter-spacing: 2px;
+}
+
+.site-logo span {
+  color: var(--accent-gold);
+}
+
+.nav-links-list {
+  list-style: none;
+  display: flex;
+  gap: 5px;
+}
+
+.nav-links-list li a {
+  color: var(--star-white);
+  text-decoration: none;
+  padding: 8px 14px;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  transition: background 0.3s, color 0.3s;
+}
+
+.nav-links-list li a:hover,
+.nav-links-list li a.active-page {
+  background-color: var(--bright-blue);
+  color: var(--dark-space);
+}
+
+/* ===========================
+   PAGE TITLE BANNER (all pages)
+=========================== */
+
+.page-title-banner {
+  background: linear-gradient(135deg, var(--deep-blue), var(--dark-space));
+  border-bottom: 1px solid var(--glow-blue);
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.page-title-banner h1 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2.5rem;
+  color: var(--bright-blue);
+  letter-spacing: 4px;
+  margin-bottom: 10px;
+}
+
+.page-title-banner p {
+  color: var(--soft-gray);
+  font-size: 1.1rem;
+}
+
+/* ===========================
+   HOME PAGE - IMAGE SLIDER
+=========================== */
+
+.hero-slider-section {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+  background: var(--deep-blue);
+}
+
+.slider-container {
+  display: flex;
+  width: 500%;
+  height: 100%;
+  transition: transform 0.8s ease-in-out;
+}
+
+.single-slide {
+  width: 20%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.slide-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.5;
+}
+
+.slide-text-content {
+  position: relative;
+  z-index: 2;
+  padding: 20px;
+}
+
+.slide-text-content h2 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2.5rem;
+  color: var(--star-white);
+  text-shadow: 0 0 20px var(--bright-blue);
+  margin-bottom: 15px;
+}
+
+.slide-text-content p {
+  font-size: 1.1rem;
+  color: yellow;
+  max-width: 600px;
+}
+
+.slider-prev-btn,
+.slider-next-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 180, 216, 0.3);
+  border: 2px solid var(--bright-blue);
+  color: var(--star-white);
+  font-size: 1.5rem;
+  padding: 10px 18px;
+  cursor: pointer;
+  z-index: 10;
+  border-radius: 4px;
+  transition: background 0.3s;
+}
+
+.slider-prev-btn { left: 20px; }
+.slider-next-btn { right: 20px; }
+
+.slider-prev-btn:hover,
+.slider-next-btn:hover {
+  background: var(--bright-blue);
+  color: var(--dark-space);
+}
+
+.slider-dot-list {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  z-index: 10;
+  list-style: none;
+}
+
+.slider-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--soft-gray);
+  cursor: pointer;
+  border: none;
+  transition: background 0.3s;
+}
+
+.slider-dot.dot-active {
+  background: var(--bright-blue);
+}
+
+/* ===========================
+   HOME PAGE - INTRO SECTION
+=========================== */
+
+.home-intro-section {
+  padding: 70px 20px;
+  text-align: center;
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.home-intro-section h2 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.8rem;
+  color: var(--accent-gold);
+  margin-bottom: 20px;
+}
+
+.home-intro-section p {
+  max-width: 750px;
+  margin: 0 auto 15px;
+  color: var(--soft-gray);
+}
+
+/* ===========================
+   HOME PAGE - QUICK FACTS CARDS
+=========================== */
+
+.quick-facts-section {
+  padding: 40px 20px 70px;
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.quick-facts-section h2 {
+  font-family: 'Orbitron', sans-serif;
+  color: var(--bright-blue);
+  text-align: center;
+  margin-bottom: 35px;
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+}
+
+.facts-card-row {
+  display: flex;
+  gap: 25px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.single-fact-card {
+  background: var(--card-bg);
+  border: 1px solid var(--glow-blue);
+  border-radius: 8px;
+  padding: 30px 25px;
+  flex: 1;
+  min-width: 220px;
+  max-width: 280px;
+  text-align: center;
+  transition: transform 0.3s, border-color 0.3s;
+}
+
+.single-fact-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--bright-blue);
+}
+
+.fact-card-icon {
+  font-size: 2.5rem;
+  display: block;
+  margin-bottom: 15px;
+}
+
+.single-fact-card h3 {
+  font-family: 'Orbitron', sans-serif;
+  color: var(--accent-gold);
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.single-fact-card p {
+  color: var(--soft-gray);
+  font-size: 0.9rem;
+}
+
+/* --- Nested Table (inside missions table cell) --- */
+.nested-missions-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.82rem;
+  margin: 0;
+}
+
+.nested-missions-table th {
+  background: #0a2a3a;
+  color: var(--bright-blue);
+  padding: 5px 9px;
+  text-align: left;
+  font-weight: 600;
+}
+
+.nested-missions-table td {
+  padding: 5px 9px;
+  border-bottom: 1px solid #1a2a3a;
+  color: var(--soft-gray);
+}
+
+/* ===========================
+   PLANETS PAGE
+=========================== */
+
+.planets-main-section {
+  padding: 60px 20px;
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.planets-intro-text {
+  color: var(--soft-gray);
+  margin-bottom: 40px;
+  max-width: 800px;
+}
+
+.planet-info-block {
+  background: var(--card-bg);
+  border-left: 4px solid var(--bright-blue);
+  border-radius: 8px;
+  padding: 30px;
+  margin-bottom: 30px;
+  display: flex;
+  gap: 25px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+
+.planet-details h3 {
+  font-family: 'Orbitron', sans-serif;
+  color: var(--accent-gold);
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+
+.planet-details p {
+  color: var(--soft-gray);
+  margin-bottom: 10px;
+}
+
+.planet-stats-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+  font-size: 0.9rem;
+}
+
+.planet-stats-table th {
+  background: var(--glow-blue);
+  color: var(--star-white);
+  padding: 8px 12px;
+  text-align: left;
+}
+
+.planet-stats-table td {
+  padding: 8px 12px;
+  border-bottom: 1px solid #1e2a3a;
+  color: var(--soft-gray);
+}
+
+.planet-stats-table tr:hover td {
+  background: #1a2332;
+}
+
+/* ===========================
+   MISSIONS PAGE - TABLE
+=========================== */
+
+.missions-main-section {
+  padding: 60px 20px;
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.missions-intro-text {
+  color: var(--soft-gray);
+  margin-bottom: 40px;
+  max-width: 800px;
+}
+
+.big-missions-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 50px;
+}
+
+.big-missions-table caption {
+  font-family: 'Orbitron', sans-serif;
+  color: var(--accent-gold);
+  font-size: 1.1rem;
+  margin-bottom: 12px;
+  text-align: left;
+  letter-spacing: 2px;
+}
+
+.big-missions-table th {
+  background: var(--glow-blue);
+  color: var(--star-white);
+  padding: 12px 15px;
+  text-align: left;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+}
+
+.big-missions-table td {
+  padding: 12px 15px;
+  border-bottom: 1px solid #1e2a3a;
+  color: var(--soft-gray);
+  vertical-align: top;
+}
+
+.big-missions-table tr:hover td {
+  background: #111827;
+  color: var(--star-white);
+}
+
+.mission-status-badge {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.status-active {
+  background: #064e3b;
+  color: #34d399;
+}
+
+.status-complete {
+  background: #1e3a5f;
+  color: var(--bright-blue);
+}
+
+.status-planned {
+  background: #451a03;
+  color: var(--accent-gold);
+}
+
+/* ===========================
+   GALLERY PAGE
+=========================== */
+
+.gallery-main-section {
+  padding: 60px 20px;
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.gallery-intro-text {
+  color: var(--soft-gray);
+  margin-bottom: 40px;
+  max-width: 800px;
+}
+
+.photo-thumbnail-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.thumbnail-link-wrapper {
+  display: block;
+  border: 2px solid var(--glow-blue);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s, border-color 0.3s;
+  background: var(--card-bg);
+}
+
+.thumbnail-link-wrapper:hover {
+  transform: scale(1.04);
+  border-color: var(--bright-blue);
+}
+
+.thumbnail-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+}
+
+.thumbnail-caption-bar {
+  padding: 10px 12px;
+  color: var(--soft-gray);
+  font-size: 0.85rem;
+  text-align: center;
+}
+
+/* Full size image modal */
+.image-popup-overlay {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.92);
+  z-index: 9999;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.image-popup-overlay.overlay-visible {
+  display: flex;
+}
+
+.popup-full-image {
+  max-width: 90%;
+  max-height: 75vh;
+  border: 2px solid var(--bright-blue);
+  border-radius: 8px;
+}
+
+.popup-caption-text {
+  color: var(--star-white);
+  margin-top: 15px;
+  font-size: 1rem;
+}
+
+.popup-close-btn {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  background: none;
+  border: 2px solid var(--bright-blue);
+  color: var(--bright-blue);
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 5px 12px;
+  border-radius: 4px;
+}
+
+.popup-close-btn:hover {
+  background: var(--bright-blue);
+  color: var(--dark-space);
+}
+
+/* ===========================
+   ASTRONAUTS PAGE
+=========================== */
+
+.astronauts-main-section {
+  padding: 60px 20px;
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.astronaut-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.astronaut-profile-card {
+  background: var(--card-bg);
+  border: 1px solid var(--glow-blue);
+  border-radius: 10px;
+  padding: 25px;
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.astronaut-profile-card:hover {
+  transform: translateY(-5px);
+}
+
+.astronaut-avatar-icon {
+  font-size: 3.5rem;
+  display: block;
+  margin-bottom: 12px;
+}
+
+.astronaut-profile-card h3 {
+  font-family: 'Orbitron', sans-serif;
+  color: var(--accent-gold);
+  font-size: 1rem;
+  margin-bottom: 5px;
+}
+
+.astronaut-nationality {
+  color: var(--bright-blue);
+  font-size: 0.85rem;
+  margin-bottom: 12px;
+}
+
+.astronaut-profile-card p {
+  color: var(--soft-gray);
+  font-size: 0.9rem;
+}
+
+/* ===========================
+   LINKS / RESOURCES PAGE
+=========================== */
+
+.links-main-section {
+  padding: 60px 20px;
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.links-category-group {
+  margin-bottom: 50px;
+}
+
+.links-category-group h2 {
+  font-family: 'Orbitron', sans-serif;
+  color: var(--bright-blue);
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--glow-blue);
+}
+
+.external-link-card {
+  background: var(--card-bg);
+  border: 1px solid #1e2a3a;
+  border-radius: 8px;
+  padding: 20px 25px;
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  transition: border-color 0.3s;
+}
+
+.external-link-card:hover {
+  border-color: var(--bright-blue);
+}
+
+.link-card-left h3 {
+  color: var(--star-white);
+  margin-bottom: 5px;
+  font-size: 1rem;
+}
+
+.link-card-left p {
+  color: var(--soft-gray);
+  font-size: 0.9rem;
+}
+
+.visit-site-link {
+  color: var(--bright-blue);
+  text-decoration: none;
+  border: 1px solid var(--bright-blue);
+  padding: 7px 16px;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  white-space: nowrap;
+  transition: background 0.3s, color 0.3s;
+}
+
+.visit-site-link:hover {
+  background: var(--bright-blue);
+  color: var(--dark-space);
+}
+
+/* ===========================
+   CONTACT PAGE
+=========================== */
+
+.contact-main-section {
+  padding: 60px 20px;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: flex;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+.contact-form-side {
+  flex: 2;
+  min-width: 280px;
+}
+
+.contact-info-side {
+  flex: 1;
+  min-width: 220px;
+}
+
+.contact-form-side h2,
+.contact-info-side h2 {
+  font-family: 'Orbitron', sans-serif;
+  color: var(--bright-blue);
+  font-size: 1.2rem;
+  margin-bottom: 25px;
+  letter-spacing: 2px;
+}
+
+.form-field-group {
+  margin-bottom: 20px;
+}
+
+.form-field-label {
+  display: block;
+  color: var(--soft-gray);
+  margin-bottom: 7px;
+  font-size: 0.9rem;
+}
+
+.form-text-input,
+.form-select-input,
+.form-message-textarea {
+  width: 100%;
+  background: var(--card-bg);
+  border: 1px solid var(--glow-blue);
+  color: var(--star-white);
+  padding: 12px 15px;
+  border-radius: 5px;
+  font-family: 'Exo 2', sans-serif;
+  font-size: 0.95rem;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.form-text-input:focus,
+.form-select-input:focus,
+.form-message-textarea:focus {
+  border-color: var(--bright-blue);
+}
+
+.form-message-textarea {
+  height: 130px;
+  resize: vertical;
+}
+
+.field-error-message {
+  color: #f87171;
+  font-size: 0.82rem;
+  margin-top: 5px;
+  display: none;
+}
+
+.field-error-message.error-visible {
+  display: block;
+}
+
+.form-submit-btn {
+  background: var(--bright-blue);
+  color: var(--dark-space);
+  border: none;
+  padding: 13px 35px;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 0.95rem;
+  letter-spacing: 1px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.form-submit-btn:hover {
+  background: var(--glow-blue);
+  color: var(--star-white);
+}
+
+.form-success-message {
+  display: none;
+  background: #064e3b;
+  border: 1px solid #34d399;
+  color: #34d399;
+  padding: 15px 20px;
+  border-radius: 5px;
+  margin-top: 15px;
+}
+
+.form-success-message.success-visible {
+  display: block;
+}
+
+.contact-info-item {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 20px;
+  align-items: flex-start;
+}
+
+.info-item-icon {
+  font-size: 1.3rem;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.info-item-text p {
+  color: var(--soft-gray);
+  font-size: 0.9rem;
+}
+
+.info-item-text a {
+  color: var(--bright-blue);
+}
+
+.info-item-text a:hover {
+  text-decoration: underline;
+}
+
+/* ===========================
+   SITEMAP PAGE
+=========================== */
+
+.sitemap-main-section {
+  padding: 60px 20px;
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.sitemap-intro-text {
+  color: var(--soft-gray);
+  margin-bottom: 40px;
+  max-width: 700px;
+}
+
+.sitemap-tree {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-bottom: 50px;
+}
+
+.sitemap-branch {
+  background: var(--card-bg);
+  border: 1px solid var(--glow-blue);
+  border-radius: 10px;
+  padding: 25px 30px;
+  min-width: 200px;
+  flex: 1;
+}
+
+.sitemap-branch-title {
+  font-family: 'Orbitron', sans-serif;
+  color: var(--accent-gold);
+  font-size: 0.95rem;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--glow-blue);
+}
+
+.sitemap-page-list {
+  list-style: none;
+}
+
+.sitemap-page-list li {
+  margin-bottom: 10px;
+  padding-left: 12px;
+  border-left: 2px solid var(--bright-blue);
+}
+
+.sitemap-page-list li a {
+  color: var(--star-white);
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: color 0.2s;
+}
+
+.sitemap-page-list li a:hover {
+  color: var(--bright-blue);
+}
+
+.sitemap-page-list li span {
+  display: block;
+  color: var(--soft-gray);
+  font-size: 0.8rem;
+  margin-top: 2px;
+}
+
+.sitemap-visual-diagram h2 {
+  font-family: 'Orbitron', sans-serif;
+  color: var(--bright-blue);
+  font-size: 1.1rem;
+  letter-spacing: 2px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.sitemap-diagram-home {
+  display: block;
+  background: var(--bright-blue);
+  color: var(--dark-space);
+  font-family: 'Orbitron', sans-serif;
+  font-size: 0.85rem;
+  padding: 12px 25px;
+  border-radius: 6px;
+  font-weight: 700;
+  margin: 0 auto 10px;
+  text-align: center;
+  text-decoration: none;
+  width: fit-content;
+}
+
+.sitemap-connector-line {
+  width: 2px;
+  height: 25px;
+  background: var(--bright-blue);
+  margin: 0 auto;
+}
+
+.sitemap-diagram-pages {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.sitemap-diagram-page-box {
+  background: var(--card-bg);
+  border: 1px solid var(--bright-blue);
+  color: var(--star-white);
+  font-size: 0.8rem;
+  padding: 10px 16px;
+  border-radius: 6px;
+  text-align: center;
+  text-decoration: none;
+  transition: background 0.3s;
+  min-width: 110px;
+}
+
+.sitemap-diagram-page-box:hover {
+  background: var(--glow-blue);
+  color: var(--star-white);
+}
+
+/* ===========================
+   FOOTER
+=========================== */
+
+.main-footer {
+  background: var(--footer-bg);
+  border-top: 2px solid var(--glow-blue);
+  padding: 45px 20px 20px;
+  margin-top: 60px;
+}
+
+.footer-top-row {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.footer-site-name {
+  font-family: 'Orbitron', sans-serif;
+  color: var(--bright-blue);
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+}
+
+.footer-address-block p {
+  color: var(--soft-gray);
+  font-size: 0.85rem;
+  line-height: 1.8;
+}
+
+.footer-nav-column h4 {
+  color: var(--star-white);
+  font-size: 0.9rem;
+  margin-bottom: 12px;
+  letter-spacing: 1px;
+}
+
+.footer-nav-links {
+  list-style: none;
+}
+
+.footer-nav-links li {
+  margin-bottom: 7px;
+}
+
+.footer-nav-links a {
+  color: var(--soft-gray);
+  text-decoration: none;
+  font-size: 0.85rem;
+  transition: color 0.3s;
+}
+
+.footer-nav-links a:hover {
+  color: var(--bright-blue);
+}
+
+.footer-bottom-bar {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding-top: 20px;
+  border-top: 1px solid #1a1a2e;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.footer-bottom-bar p {
+  color: var(--soft-gray);
+  font-size: 0.8rem;
+}
+
+.footer-secondary-nav {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.footer-secondary-nav a {
+  color: var(--soft-gray);
+  font-size: 0.8rem;
+  text-decoration: none;
+}
+
+.footer-secondary-nav a:hover {
+  color: var(--bright-blue);
+}
+
+/* ===========================
+   LINK COLORS (site-wide)
+=========================== */
+
+a:link    { color: var(--bright-blue); }
+a:visited { color: #7ec8e3; }
+a:hover   { color: var(--accent-gold); }
+a:active  { color: var(--accent-gold); }
